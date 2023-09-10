@@ -61,6 +61,7 @@ export default function Home() {
 
     socket.addEventListener("close", (event) => {
       // Koneksi ditutup, Anda dapat menambahkan log atau tindakan lain di sini
+      term.write("\r\n\x1b[31mConnection Closed\x1b[m\r\n");
     });
 
     // Membersihkan sumber daya saat komponen di-unmount
